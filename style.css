@@ -6,6 +6,8 @@
     --button-hover-background: #007B9A;
     --lotto-number-background: #4CAF50;
     --lotto-number-text: white;
+    --input-border-color: #ccc;
+    --input-focus-border-color: #008CBA;
 }
 
 body[data-theme="dark"] {
@@ -15,6 +17,8 @@ body[data-theme="dark"] {
     --button-background: #007B9A;
     --button-hover-background: #005f79;
     --lotto-number-background: #388E3C;
+    --input-border-color: #555;
+    --input-focus-border-color: #007B9A;
 }
 
 body {
@@ -22,10 +26,13 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     display: flex;
+    flex-direction: column; /* Changed to column to stack sections */
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Changed to min-height */
     margin: 0;
+    padding: 20px; /* Added padding for overall spacing */
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -36,6 +43,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
+    margin-bottom: 20px; /* Added margin to separate from new section */
+    width: 100%;
+    max-width: 600px;
 }
 
 #theme-toggle {
@@ -92,5 +102,73 @@ h1 {
 }
 
 .draw-button:hover {
+    background-color: var(--button-hover-background);
+}
+
+/* Contact Form Styles */
+.contact-section {
+    background: var(--container-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.contact-section h2 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-section label {
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: left;
+    margin-bottom: 0.2rem;
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    padding: 0.8rem;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--background-color); /* Use general background for input */
+    color: var(--text-color);
+    transition: border-color 0.3s;
+}
+
+.contact-section input[type="text"]:focus,
+.contact-section input[type="email"]:focus,
+.contact-section textarea:focus {
+    border-color: var(--input-focus-border-color);
+    outline: none;
+}
+
+.contact-section button[type="submit"] {
+    background-color: var(--button-background);
+    color: var(--lotto-number-text);
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button[type="submit"]:hover {
     background-color: var(--button-hover-background);
 }
