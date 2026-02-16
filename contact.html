@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LottoGen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="logo">
+        <a href="index.html">LottoGen</a>
+    </div>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">홈</a></li>
+            <li><a href="about.html">소개</a></li>
+            <li><a href="contact.html">문의</a></li>
+        </ul>
+    </nav>
+</header>
+    <div class="main-content">
+        <h1>Contact Us</h1>
+        <section class="contact-section">
+            <h2>문의하기</h2>
+            <p>사이트에 대한 질문이나 파트너십 제안이 있으시면 아래 양식을 통해 문의해주세요.</p>
+            <form action="https://formspree.io/f/xdalzobj" method="POST">
+                <label for="name">이름:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">이메일:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">내용:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">문의 보내기</button>
+            </form>
+        </section>
+    </div>
+    <footer class="site-footer">
+    <p>&copy; 2026 LottoGen. All rights reserved.</p>
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="privacy.html">개인정보처리방침</a></li>
+        </ul>
+    </nav>
+</footer>
+    <script src="main.js"></script>
+</body>
+</html>
