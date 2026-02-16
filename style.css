@@ -172,3 +172,20 @@ h1 {
 .contact-section button[type="submit"]:hover {
     background-color: var(--button-hover-background);
 }
+
+/* Disqus Section Styles */
+.disqus-section {
+    background: var(--container-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.disqus-section h2 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
