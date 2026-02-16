@@ -1,23 +1,58 @@
+:root {
+    --background-color: #f0f2f5;
+    --container-background: white;
+    --text-color: #333;
+    --button-background: #008CBA;
+    --button-hover-background: #007B9A;
+    --lotto-number-background: #4CAF50;
+    --lotto-number-text: white;
+}
+
+body[data-theme="dark"] {
+    --background-color: #121212;
+    --container-background: #1e1e1e;
+    --text-color: #e0e0e0;
+    --button-background: #007B9A;
+    --button-hover-background: #005f79;
+    --lotto-number-background: #388E3C;
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
     text-align: center;
-    background: white;
+    background: var(--container-background);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--button-background);
+    color: var(--lotto-number-text);
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
 }
 
 h1 {
-    color: #333;
+    color: var(--text-color);
 }
 
 .lotto-numbers {
@@ -31,8 +66,8 @@ h1 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--lotto-number-background);
+    color: var(--lotto-number-text);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,8 +77,8 @@ h1 {
 }
 
 .draw-button {
-    background-color: #008CBA;
-    color: white;
+    background-color: var(--button-background);
+    color: var(--lotto-number-text);
     border: none;
     padding: 15px 32px;
     text-align: center;
@@ -57,5 +92,5 @@ h1 {
 }
 
 .draw-button:hover {
-    background-color: #007B9A;
+    background-color: var(--button-hover-background);
 }
